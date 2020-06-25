@@ -1,3 +1,3 @@
 # Budget Calculator
 
-Code for Udemy Bugety Project 
+Code for Udemy Budgety Project 
