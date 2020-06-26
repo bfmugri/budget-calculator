@@ -31,13 +31,16 @@ var budgetController = (function() {
             var newItem, ID;
 
             //Create new ID
+            // TESTING GIT
 
             if(data.allItems[type].length > 0){
                 ID = data.allItems[type][data.allItems[type].length - 1].id + 1;
             }else {
-                ID =  0;
+                ID =0;
             }
             
+             
+
             //Create new item based on inc or exp type
             if (type === 'exp'){
                 newItem = new Expense(ID, des, val);
@@ -80,6 +83,17 @@ var UIController = (function() {
                  description: document.querySelector(DOMstrings.inputDescription).value,
                  value: document.querySelector(DOMstrings.inputValue).value
             };
+        },
+
+        addListItem: function(obj, type){
+            // Create place holder HTML string
+
+            '<div class="item clearfix" id="income-0"> <div class="item__description">Salary</div> <divclass="right clearfix"> <div class="item__value">+ 2,100.00</div><div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>'
+
+            // Replace placehoolder with actual data
+
+            //Insert the html into DOM
+
         },
 
         getDOMstrings: function(){
